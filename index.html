@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taller 3D — Contabilidad</title>
+  <meta name="description" content="Contabilidad, calculadora de costos y camino al éxito para un emprendimiento de impresión 3D.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a78d6'/%3E%3Cpath d='M8 22h16M10 18h12M12 14h8M14 10h4' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M8 22h16M10 18h12M12 14h8M14 10h4" stroke="var(--surface)" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </span>
+      <div>
+        <strong id="business-name">Mi taller 3D</strong>
+        <small>Contabilidad y camino al éxito</small>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <label class="month-picker">
+        <span class="sr-only">Mes</span>
+        <input type="month" id="month">
+      </label>
+      <button class="icon-btn" id="theme-toggle" title="Cambiar tema" aria-label="Cambiar tema">◐</button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs" aria-label="Secciones">
+    <a href="#panel" data-tab="panel">Panel</a>
+    <a href="#ventas" data-tab="ventas">Ventas</a>
+    <a href="#gastos" data-tab="gastos">Gastos</a>
+    <a href="#calculadora" data-tab="calculadora">Calculadora</a>
+    <a href="#inventario" data-tab="inventario">Filamentos</a>
+    <a href="#camino" data-tab="camino">Camino al éxito</a>
+    <a href="#ajustes" data-tab="ajustes">Ajustes</a>
+  </nav>
+
+  <main id="view" tabindex="-1"></main>
+
+  <dialog id="dialog">
+    <form method="dialog" id="dialog-form" class="dialog-body"></form>
+  </dialog>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <div id="tooltip" class="tooltip" hidden></div>
+
+  <script src="js/calc.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
